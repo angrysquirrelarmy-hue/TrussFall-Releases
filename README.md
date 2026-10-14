@@ -12,9 +12,21 @@ A goofy co-op construction game for up to four players: punch footing holes, sta
 
 Windows SmartScreen may warn about the launcher because it isn't code-signed: choose **More info > Run anyway**.
 
-## Install (Steam Deck / Linux, through Proton)
+## Install (SteamOS: Legion Go S, Steam Deck, and Linux)
 
-TrussFall is a Windows game that runs under Proton (Steam's compatibility layer).
+TrussFall has a native Linux build with its own launcher that updates it, just like the Windows one.
+
+1. In **Desktop Mode**, download **TrussFall-SteamOS.tar.gz** from the [latest release](https://github.com/angrysquirrelarmy-hue/TrussFall-Releases/releases/latest).
+2. Right-click it > **Extract > Extract archive here**, open the **TrussFall-SteamOS** folder and run **install.sh** (double-click > Execute, or right-click > Run In Konsole). The game downloads into `~/.local/share/TrussFall` (about 330 MB).
+3. In Steam: **Games > Add a Non-Steam Game to My Library**, tick **TrussFall**, **Add Selected Programs**.
+4. Back in **Game Mode**, TrussFall is in your library under Non-Steam. Every time you press PLAY it checks for a newer build, downloads only what changed, then starts the game (with no internet it plays what's installed).
+
+The game runs on Vulkan. If it shows a black screen, set its Steam **Launch Options** to `-- -force-glcore` (OpenGL).
+Your saved houses and settings live in `~/.config/unity3d` and are never touched by updates.
+
+## Install (Steam Deck / Linux, through Proton): the alternative
+
+The Windows build also runs under Proton (Steam's compatibility layer).
 
 1. Download **TrussFallLauncher.exe** from the [latest release](https://github.com/angrysquirrelarmy-hue/TrussFall-Releases/releases/latest).
 2. In Steam (desktop mode on a Deck): **Games > Add a Non-Steam Game to My Library**, browse to the launcher, add it.
